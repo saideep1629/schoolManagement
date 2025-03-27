@@ -13,4 +13,11 @@ app.use(express.json({limit: "16kb"}))
 
 app.use(cookieParser())
 
+// routes import
+import schoolRouter from "./routes/school.routes.js";
+
+// route declaration
+app.use("/eduTrust", schoolRouter)
+
+
 export { app }
